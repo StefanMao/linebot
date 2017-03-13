@@ -532,7 +532,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            #http://imgur.com/KyMbxLf yoona
+            #http://imgur.com/KyMbxLf yoo
             thumbnail_image_url='http://imgur.com/KyMbxLf', 
             actions=[
                 MessageTemplateAction(
@@ -540,7 +540,15 @@ def handle_message(event):
                     text='開始玩'
                 ),
                 URITemplateAction(
-                    label='有話想對毛毛說嗎?',
+                    label='影片介紹 阿肥bot',
+                    uri='https://youtu.be/1IxtWgWxtlE'
+                ),
+                URITemplateAction(
+                    label='建議回饋,'
+                    uri='https://www.facebook.com/yuqi.mao1'
+                ),
+                URITemplateAction(
+                    label='毛毛',
                     uri='https://www.facebook.com/yuqi.mao1'
                 )
             ]
