@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @StefanMao
- Sign out
- Watch 3
-  Unstar 29
-  Fork 9 twtrubiks/line-bot-tutorial
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathline-bot-tutorial/app.py
-bf0eb9a  16 days ago
-@twtrubiks twtrubiks v2 line bot
-1 contributor
-RawBlameHistory     
-561 lines (514 sloc)  19.3 KB
 import requests
 import re
 import random
