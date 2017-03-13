@@ -532,8 +532,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            #http://imgur.com/KyMbxLf yoo
-            thumbnail_image_url='http://imgur.com/KyMbxLf', 
+            thumbnail_image_url='http://imgur.com/KyMbxLf', #http://imgur.com/KyMbxLf
             actions=[
                 MessageTemplateAction(
                     label='開始玩',
@@ -544,12 +543,12 @@ def handle_message(event):
                     uri='https://youtu.be/1IxtWgWxtlE'
                 ),
                 URITemplateAction(
-                    label='建議回饋,'
-                    uri='https://www.facebook.com/yuqi.mao1'
+                    label='如何建立自己的 Line Bot',
+                    uri='https://github.com/twtrubiks/line-bot-tutorial'
                 ),
                 URITemplateAction(
-                    label='毛毛',
-                    uri='https://www.facebook.com/yuqi.mao1'
+                    label='聯絡作者',
+                    uri=''
                 )
             ]
         )
