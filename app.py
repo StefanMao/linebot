@@ -532,14 +532,15 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            thumbnail_image_url='http://imgur.com/a/lo0Gc',
+            #http://imgur.com/KyMbxLf yoona
+            thumbnail_image_url='http://imgur.com/KyMbxLf', 
             actions=[
                 MessageTemplateAction(
                     label='開始玩',
                     text='開始玩'
                 ),
                 URITemplateAction(
-                    label='毛毛的聯絡方式',
+                    label='有話想對毛毛說嗎?',
                     uri='https://www.facebook.com/yuqi.mao1'
                 )
             ]
