@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @StefanMao
+ Sign out
+ Watch 3
+  Unstar 29
+  Fork 9 twtrubiks/line-bot-tutorial
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathline-bot-tutorial/app.py
+bf0eb9a  16 days ago
+@twtrubiks twtrubiks v2 line bot
+1 contributor
+RawBlameHistory     
+561 lines (514 sloc)  19.3 KB
 import requests
 import re
 import random
@@ -532,14 +550,14 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            thumbnail_image_url='http://imgur.com/KyMbxLf', #http://imgur.com/KyMbxLf
+            thumbnail_image_url='http://imgur.com/KyMbxLf.jpg',
             actions=[
                 MessageTemplateAction(
                     label='開始玩',
                     text='開始玩'
                 ),
                 URITemplateAction(
-                    label='影片介紹 阿肥bot',
+                    label='我是潤娥bot',
                     uri='https://youtu.be/1IxtWgWxtlE'
                 ),
                 URITemplateAction(
@@ -548,7 +566,7 @@ def handle_message(event):
                 ),
                 URITemplateAction(
                     label='聯絡作者',
-                    uri=''
+                    uri='https://www.facebook.com/yuqi.mao1'
                 )
             ]
         )
@@ -558,3 +576,5 @@ def handle_message(event):
 
 if __name__ == '__main__':
     app.run()
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
