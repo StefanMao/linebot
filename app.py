@@ -352,7 +352,8 @@ def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
     
-    line_bot_api.reply_message(event.reply_token,"親愛的用戶您好，我是藍鑽客服機器人，很高興能為您服務! ")
+       line_bot_api.reply_message(event.reply_token,
+        TextSendMessage(text='親愛的用戶您好，我是藍鑽客服機器人，很高興能為您服務!'))
         
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
