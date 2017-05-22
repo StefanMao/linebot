@@ -346,8 +346,7 @@ def default_factory():
     return 'not command'
 
     #check the text_message 呼叫客服人員 字串
-def pattern
-Customerservice(text):
+def patternCustomerservice(text):
     patterns = ["小藍", "藍", "Blue", "blue", "客服人員", "哈囉", "嗨", "在嗎", "安安","Miss Blue"]
     for pattern in patterns:
         if re.search(pattern, text, re.IGNORECASE):
@@ -361,12 +360,15 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     
 
-    if event.message.text== "小藍" or "Blue":
+    if event.message.text== "小藍":
+        g_message="我是藍鑽(Blue Diamond)客服人員"\
+                  "Miss Blue"\
+                  "很高興能為您服務~"
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text="我是藍鑽(Blue Diamond)客服人員"\
-                                                        "Miss Blue"\
-                                                        "很高興能為您服務~"))
+            event.reply_token, TextSendMessage(text=g_message))
+
     return 0
+
                
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
