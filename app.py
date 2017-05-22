@@ -14,6 +14,7 @@ from linebot.exceptions import (
 from linebot.models import *
 
 app = Flask(__name__)
+
 line_bot_api = LineBotApi('LzECbSo20aQnEhxwrSEjzIc9hQkc6M3RwcmfeOP5BdI6LdbSrg6XB/ar42h85udym3BYwQZzqmTefuVJGf2ej4V9hYF77u1w2ji97NmQAWHKx+vtMoga+hpm+tYcWY6QHdFkAvccD2WzjJJIYBBqagdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('05e4e77de579529a78ff06655b121d25')
 
@@ -353,13 +354,11 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     
     if event.message.text=="小藍":
-        g_megtext="我是藍鑽(Blue Diamond)客服人員\n\
-         Miss Blue\n\
-        很高興能為您服務~"
-            line_bot_api.reply_message(
+        g_megtext="我是藍鑽(Blue Diamond)客服人員\n Miss Blue\n 很高興能為您服務~"\
+          line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=g_megtext))
-            return 0
+        return 0
 
     if event.message.text == "eyny":
         content = eynyMovie()
