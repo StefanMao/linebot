@@ -344,12 +344,9 @@ def panx():
 
 def callblue(text):
     L=["小藍","Blue","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss"]
-     for data in L:
-        if(text==L(data)):
-            content= ""
-            content= "我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
-        return True
-   
+     if(L.index(text)):
+    return True
+           
 
 
 def default_factory():
