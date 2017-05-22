@@ -348,7 +348,7 @@ def default_factory():
     #check the text_message 呼叫客服人員 字串
 def pattern
 Customerservice(text):
-    patterns = ['小藍', '藍', 'Blue', 'blue', '客服人員', '哈囉', '嗨', '在嗎', '安安','Miss Blue']
+    patterns = ["小藍", "藍", "Blue", "blue", "客服人員", "哈囉", "嗨", "在嗎", "安安","Miss Blue"]
     for pattern in patterns:
         if re.search(pattern, text, re.IGNORECASE):
             return True
