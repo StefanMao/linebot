@@ -344,8 +344,8 @@ def panx():
 
 def callblue(text):
     L=["小藍","Blue","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss"]
-     if(L.index(text)):
-    return True
+    if(L.index(text)):
+       return True
            
 
 
