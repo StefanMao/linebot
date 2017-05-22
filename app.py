@@ -351,24 +351,9 @@ def handle_message(event):
     # cmd = defaultdict(default_factory, command)
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if event.message.text == "eyny":
-        content = eynyMovie()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "蘋果即時新聞":
-        content = appleNews()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "PTT 表特版 近期大於 10 推的文章":
-        content = pttBeauty()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
+    
+    line_bot_api.reply_message(event.reply_token,"親愛的用戶您好，我是藍鑽客服機器人，很高興能為您服務! ")
+        
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
         image_message = ImageSendMessage(
@@ -378,37 +363,9 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token, image_message)
         return 0
-
-    if event.message.text == "近期熱門廢文":
-        content = pttHot()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "即時廢文":
-        content = pttGossiping()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "近期上映電影":
-        content = movie()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "科技新報":
-        content = technews()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "PanX泛科技":
-        content = panx()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
+    
+        
+    
     if event.message.text == "開始玩":
         buttons_template = TemplateSendMessage(
             alt_text='Buttons template',
