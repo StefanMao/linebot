@@ -342,6 +342,11 @@ def panx():
         content += title + "\n" + link + "\n\n"
     return content
 
+def callblue():
+    content= ""
+    content= "我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
+    return content
+
 
 def default_factory():
     return 'not command'
@@ -353,12 +358,11 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     #("小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss"):
     
-    if event.message.text=="小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss":
-        step_text="我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
+    if event.message.text=="小藍" or "Blue" or "blue" or "藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss":
+        content=callblue()
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=step_text))
-        step_text=""
+        TextSendMessage(text=content))
         return 0  
     
     if event.message.text == "正妹圖片":
