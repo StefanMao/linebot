@@ -353,7 +353,7 @@ def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
     
-    if event.message.text== "小藍":
+    if event.message.text== "小藍" or "Blue" or "藍":
         g_megtext="我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
         line_bot_api.reply_message(
            event.reply_token,
