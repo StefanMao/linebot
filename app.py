@@ -346,12 +346,6 @@ def panx():
 def default_factory():
     return 'not command'
 
-ddef patterncusmessage(text):
-    #patterns = ["小藍", "Blue", 'blue', '藍', '客服人員', '哈囉', '嗨', '在嗎', '在嘛','安安','Miss Blue','Miss','miss']
-    patterns = ["小藍", "Blue"]
-    for pattern in patterns:
-        if re.search(pattern, text, re.IGNORECASE):
-            return True
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -360,7 +354,7 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     #("小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss"):
     
-    if patterncusmessage(event.message.text): 
+    if event.message.text==("小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss"):
         g_megtext="我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
         line_bot_api.reply_message(
            event.reply_token,
