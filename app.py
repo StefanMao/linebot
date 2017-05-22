@@ -345,9 +345,9 @@ def panx():
 def callblue(text):
     L=["小藍","Blue","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss"]
     if(L.index(text)):  
-    return True
-    
-#MESSAGE
+     return True
+
+
 def callblue_msg():
     call_content="我是藍鑽(Blue Diamond)客服人員\n Miss Blue!\n 很高興能為您服務~"
     return call_content     
