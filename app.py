@@ -100,14 +100,14 @@ def callback():
 
     return 'OK'
 
-
+#check the text_message "Mega" 字串
 def patternMega(text):
     patterns = ['mega', 'mg', 'mu', 'ＭＥＧＡ', 'ＭＥ', 'ＭＵ', 'ｍｅ', 'ｍｕ', 'ｍｅｇａ']
     for pattern in patterns:
         if re.search(pattern, text, re.IGNORECASE):
             return True
 
-
+#function (search eyny Movie with "Mega" download )
 def eynyMovie():
     targetURL = 'http://www.eyny.com/forum-205-1.html'
     print('Start parsing eynyMovie....')
@@ -125,7 +125,7 @@ def eynyMovie():
             content += data
     return content
 
-
+# search appleNews article
 def appleNews():
     targetURL = 'http://www.appledaily.com.tw/realtimenews/section/new/'
     head = 'http://www.appledaily.com.tw'
@@ -144,11 +144,11 @@ def appleNews():
         content += link + '\n\n'
     return content
 
-
+#ppt partmeter array
 article_list = []
 article_gossiping = []
 
-
+#get PPt Page Number
 def getPageNumber(content):
     startIndex = content.find('index')
     endIndex = content.find('.html')
@@ -369,7 +369,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-    if event.message.text == "隨便來張正妹圖片":
+    if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
         image_message = ImageSendMessage(
             original_content_url=picture[index_pic],
@@ -554,7 +554,14 @@ def handle_message(event):
         )
     )
     line_bot_api.reply_message(event.reply_token, buttons_template)
+    
+    #event.reply_token function doing something
 
+    #line_bot_api.reply_message() # 問候
+
+    #spreate every function 
+
+    
 
 if __name__ == '__main__':
     app.run()
