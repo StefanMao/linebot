@@ -346,7 +346,6 @@ def panx():
 def default_factory():
     return 'not command'
 
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # cmd = defaultdict(default_factory, command)
@@ -355,10 +354,9 @@ def handle_message(event):
     #("小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss"):
     
     if event.message.text=="小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss":
-        g_megtext="我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
         line_bot_api.reply_message(
-           event.reply_token,
-            TextSendMessage(text=g_megtext))
+        event.reply_token,
+        TextSendMessage(text="我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"))
         return 0  
     
     if event.message.text == "正妹圖片":
