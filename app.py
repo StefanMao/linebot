@@ -345,6 +345,14 @@ def panx():
 def default_factory():
     return 'not command'
 
+    #check the text_message 呼叫客服人員 字串
+def pattern
+Customerservice(text):
+    patterns = ['小藍', '藍', 'Blue', 'blue', '客服人員', '哈囉', '嗨', '在嗎', '安安','Miss Blue']
+    for pattern in patterns:
+        if re.search(pattern, text, re.IGNORECASE):
+            return True
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -352,6 +360,13 @@ def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
     
+
+    if Customerservice(event.message.text)== True:
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text="我是藍鑽(Blue Diamond)客服人員"\
+                                                        "Miss Blue"\
+                                                        "很高興能為您服務~"))
+    return 0
                
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
