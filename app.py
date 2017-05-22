@@ -342,10 +342,14 @@ def panx():
         content += title + "\n" + link + "\n\n"
     return content
 
-def callblue():
-    content= ""
-    content= "我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
-    return content
+def callblue(text):
+    L=["小藍","Blue","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss"]
+     for data in L:
+        if(text==L(data)):
+            content= ""
+            content= "我是藍鑽(Blue Diamond)客服人員\nMiss Blue!\n很高興能為您服務~"
+        return True
+   
 
 
 def default_factory():
@@ -358,8 +362,7 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     #("小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss"):
     
-    if event.message.text=="小藍" or event.message.text== "Blue" event.message.text==  or "blue" or event.message.text==  "藍" or event.message.text== "客服人員" or event.message.text== "哈囉" orevent.message.text==  "嗨" or event.message.text== "在嗎"or event.message.text== "在嘛" or event.message.text==  "安安" or event.message.text== "Miss Blue" or event.message.text== "Miss" or event.message.text==  "miss":
-        content = callblue()
+    if callblue(event.message.text):
         line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=content))
