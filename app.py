@@ -347,7 +347,8 @@ def default_factory():
     return 'not command'
 
 ddef patterncusmessage(text):
-    patterns = ['小藍', 'Blue', 'blue', '藍', '客服人員', '哈囉', '嗨', '在嗎', '在嘛','安安','Miss Blue','Miss','miss']
+    #patterns = ["小藍", "Blue", 'blue', '藍', '客服人員', '哈囉', '嗨', '在嗎', '在嘛','安安','Miss Blue','Miss','miss']
+    patterns = ["小藍", "Blue"]
     for pattern in patterns:
         if re.search(pattern, text, re.IGNORECASE):
             return True
