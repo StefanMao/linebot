@@ -358,8 +358,8 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     #("小藍" or "Blue" or "blue" or"藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss"):
     
-    if event.message.text=="小藍" or "Blue" or "blue" or "藍" or "客服人員" or "哈囉" or "嗨" or "在嗎"or "在嘛" or "安安" or "Miss Blue"or "Miss"or "miss":
-        content=callblue()
+    if event.message.text=="小藍" or event.message.text== "Blue" event.message.text==  or "blue" or event.message.text==  "藍" or event.message.text== "客服人員" or event.message.text== "哈囉" orevent.message.text==  "嗨" or event.message.text== "在嗎"or event.message.text== "在嘛" or event.message.text==  "安安" or event.message.text== "Miss Blue" or event.message.text== "Miss" or event.message.text==  "miss":
+        content = callblue()
         line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=content))
