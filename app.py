@@ -368,10 +368,7 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
-        line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=call_content))
-
+        
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -398,7 +395,7 @@ def handle_message(event):
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=call_content),buttons_template)
 
         return 0  
     
