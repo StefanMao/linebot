@@ -368,7 +368,10 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
-        
+        TextSendMessage(text=call_content)
+        blue_ask=True
+        return 0
+    if blue_ask==True:
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -395,9 +398,11 @@ def handle_message(event):
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token,buttons_template,TextSendMessage(text=call_content))
+        line_bot_api.reply_message(event.reply_token,buttons_template)
+        blue_ask=False
+        return 0
 
-        return 0  
+
     
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
