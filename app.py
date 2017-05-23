@@ -368,9 +368,11 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
-        TextSendMessage(text=call_content)
-        blue_ask=True
+        blue_ask=True # 呼叫 ask服務
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
+
         return 0
+    
     if blue_ask==True:
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
@@ -398,8 +400,8 @@ def handle_message(event):
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token,buttons_template)
         blue_ask=False
+        line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
 
 
