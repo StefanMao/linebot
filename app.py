@@ -368,11 +368,17 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
+        blue_ask=True # 呼叫 ask服務
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
+
+        return 0
+    
+    if  blue_ask==True:
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='我是藍鑽(Blue Diamond)客服人員\n Miss 藍!\n 很高興能為您服務~"',
-                text='請選擇您需要的服務 ',
+                title='請選擇您要的服務',
+                text='請選擇',
                 thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
                     MessageTemplateAction(
@@ -394,9 +400,11 @@ def handle_message(event):
                 ]
             )
         )
+        blue_ask=False
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
-        
+
+
     
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
@@ -459,8 +467,8 @@ def handle_message(event):
                         text='看廢文'
                     ),
                     MessageTemplateAction(
-                        label='正妹',
-                        text='正妹'
+                        label='正妹圖片',
+                        text='正妹圖片'
                     )
                 ]
             )
@@ -534,7 +542,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)
         return 0
-    if event.message.text == "正妹":
+    if event.message.text == "正妹圖片":
         buttons_template = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
