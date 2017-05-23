@@ -368,11 +368,10 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
-             
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title=call_content,
+                title='我是藍鑽(Blue Diamond)客服人員\n Miss 藍!\n 很高興能為您服務~"',
                 text='請選擇您需要的服務 ',
                 thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
@@ -395,12 +394,9 @@ def handle_message(event):
                 ]
             )
         )
-        blue_ask=False
         line_bot_api.reply_message(event.reply_token,buttons_template)
-
         return 0
-    
-    
+        
     
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
