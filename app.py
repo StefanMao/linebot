@@ -373,7 +373,7 @@ def handle_message(event):
 
         return 0
     
-    if blue_ask==True:
+    if  text==call_content:
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
