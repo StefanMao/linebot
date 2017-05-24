@@ -371,8 +371,8 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='我是藍鑽(Blue Diamond)客服人員\n Miss 藍!\n 很高興能為您服務~',
-                text='請選擇',
+                title='我是藍鑽(Blue Diamond)客服人員 : Miss 藍!',
+                text='請選擇您要的服務',
                 thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
                     MessageTemplateAction(
