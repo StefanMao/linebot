@@ -368,11 +368,10 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
-        
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='請選擇您要的服務',
+                title='我是藍鑽(Blue Diamond)客服人員\n Miss 藍!\n 很高興能為您服務~',
                 text='請選擇',
                 thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
@@ -397,41 +396,9 @@ def handle_message(event):
         )
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
-
         return 0
     
-    if  blue_ask==True:
-        buttons_template = TemplateSendMessage(
-        alt_text='Buttons template',
-        template=ButtonsTemplate(
-                title='請選擇您要的服務',
-                text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
-                actions=[
-                    MessageTemplateAction(
-                        label='藍鑽-T5 檯燈產品資訊',
-                        text='藍鑽-T5 檯燈產品資訊'
-                    ),
-                    MessageTemplateAction(
-                        label='HEP-東林科技股份有限公司',
-                        text='HEP-東林科技股份有限公司'
-                    ),
-                    MessageTemplateAction(
-                        label='產品促銷',
-                        text='產品促銷'
-                    ),
-                    MessageTemplateAction(
-                        label='客服人員諮詢',
-                        text='客服人員諮詢'
-                    )
-                ]
-            )
-        )
-        blue_ask=False
-        line_bot_api.reply_message(event.reply_token,buttons_template)
-        return 0
-
-
+    
     
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
