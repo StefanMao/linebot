@@ -398,7 +398,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
     else:
             reply_unknow="你覺得我漂亮嗎 ?\n"
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(tetx=reply_unknow))
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=reply_unknow))
             return 0
 
         
