@@ -412,6 +412,16 @@ def handle_message(event):
     elif event.message.text =="客服人員諮詢":
         return 0
 
+    elif event.message.text == "正妹圖片":
+        index_pic = random.randint(0, len(picture) - 1)
+        image_message = ImageSendMessage(
+            original_content_url=picture[index_pic],
+            preview_image_url=picture[index_pic]
+        )
+        line_bot_api.reply_message(
+            event.reply_token, image_message)
+        return 0
+
     else:
             reply_unknow="不好意思，客服人員忙線中...."
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text=reply_unknow))
