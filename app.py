@@ -368,8 +368,35 @@ def handle_message(event):
     
     if callblue(event.message.text):
         call_content=callblue_msg()
-        blue_ask=True # 呼叫 ask服務
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
+        
+        buttons_template = TemplateSendMessage(
+        alt_text='Buttons template',
+        template=ButtonsTemplate(
+                title='請選擇您要的服務',
+                text='請選擇',
+                thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
+                actions=[
+                    MessageTemplateAction(
+                        label='藍鑽-T5 檯燈產品資訊',
+                        text='藍鑽-T5 檯燈產品資訊'
+                    ),
+                    MessageTemplateAction(
+                        label='HEP-東林科技股份有限公司',
+                        text='HEP-東林科技股份有限公司'
+                    ),
+                    MessageTemplateAction(
+                        label='產品促銷',
+                        text='產品促銷'
+                    ),
+                    MessageTemplateAction(
+                        label='客服人員諮詢',
+                        text='客服人員諮詢'
+                    )
+                ]
+            )
+        )
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
+        line_bot_api.reply_message(event.reply_token,buttons_template)
 
         return 0
     
