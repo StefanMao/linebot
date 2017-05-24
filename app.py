@@ -355,6 +355,9 @@ def callblue_msg():
     call_content="我是藍鑽(Blue Diamond)客服人員\n Miss 藍!\n 很高興能為您服務~"
     return call_content     
 
+def errormessage():
+    reply_errormessage="功能維修中.."
+    return reply_errormessage
 
 def default_factory():
     return 'not command'
@@ -396,30 +399,25 @@ def handle_message(event):
         )
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
+    elif event.message.text =="藍鑽-T5 檯燈產品資訊":
+
+        return 0
+
+    elif event.message.text =="HEP-東林科技股份有限公司":
+        return 0
+    
+    elif event.message.text =="產品促銷":
+        return 0
+    
+    elif event.message.text =="客服人員諮詢":
+        return 0
+
     else:
             reply_unknow="不好意思，客服人員忙線中...."
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text=reply_unknow))
             return 0
 
         
-
-    # 檯燈 function
-
-    if event.message.text =="藍鑽-T5 檯燈產品資訊":
-
-        return 0
-
-    if event.message.text=="HEP-東林科技股份有限公司":
-        return 0
-
-    if event.message.text=="產品促銷":
-        return 0
-
-    if event.message.text=="客服人員諮詢":
-        return 0
-
-
-    
     
     if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
