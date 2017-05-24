@@ -396,8 +396,26 @@ def handle_message(event):
         )
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
+        else :
+            reply_unknow="你覺得我漂亮嗎 ?\n" 
+
         return 0
-    
+    # 檯燈 function
+
+    if event.message.text =="藍鑽-T5 檯燈產品資訊":
+
+        return 0
+
+    if event.message.text=="HEP-東林科技股份有限公司":
+        return 0
+
+    if event.message.text=="產品促銷":
+        return 0
+
+    if event.message.text=="客服人員諮詢":
+        return 0
+
+
     
     
     if event.message.text == "正妹圖片":
