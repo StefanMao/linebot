@@ -397,7 +397,7 @@ def handle_message(event):
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
     else:
-            reply_unknow="你覺得我漂亮嗎 ?\n"
+            reply_unknow="不好意思，客服人員忙線中...."
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text=reply_unknow))
             return 0
 
