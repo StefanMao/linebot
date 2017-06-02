@@ -413,15 +413,31 @@ def handle_message(event):
                 actions=[
                     MessageTemplateAction(
                         label='☆ 長壽命、耗能低',
-                        #text='message text1'
+                        text='message text1'
                     ),
                     MessageTemplateAction(
                         label='☆ 耗能低、啟動快',
-                        #text='message text1'
+                        text='message text1'
                     )
 
                         ]
-                        )
+                        ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='Green Life-T5 檯燈產品特色',
+                text='前射式光形設計',
+                actions=[
+                    MessageTemplateAction(
+                        label='光照範圍更大',
+                        text='message text2'
+                    ),
+                    MessageTemplateAction(
+                        label='一秒閃爍4萬5千次 不刺眼、不眩光',
+                        text='message text2'
+                    )
+                   
+                        ]
+            )
                 ]
             )
         )
