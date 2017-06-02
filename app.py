@@ -343,7 +343,7 @@ def panx():
     return content
 
 def callblue(text):
-    L=["小藍","藍小姐","Blue","服務選單","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss","藍兒","小","小姐","克服","蘭","藍鑽","Diamond","diamond","欸","Hi","hi","hello"]
+    L=["小藍","藍小姐","Blue","服務選單","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss","藍兒","小","GL","小姐","克服","蘭","藍鑽","Diamond","diamond","欸","Hi","hi","hello"]
     if( text in L ):  
      return True
     else:
@@ -416,7 +416,7 @@ def handle_message(event):
                         text='T5/14W 節能螢光燈管 '
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低 長壽命 耗能低',
+                        label='☆ 耗能低 長壽命',
                         text='節能環保 減碳設計'
                     )
 
