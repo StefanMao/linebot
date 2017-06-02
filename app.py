@@ -402,21 +402,26 @@ def handle_message(event):
         return 0
     
     if event.message.text =="Green-Life-T5檯燈 產品資訊":
-        buttons_template = TemplateSendMessage(
-        alt_text='Buttons template',
-        template=ButtonsTemplate(
-                title='Green-Life-T5檯燈 產品資訊 ',
-                text='請選擇服務類型',
+        carousel_template_message = TemplateSendMessage(
+        alt_text='Green-Life-T5檯燈 產品資訊',
+        template=CarouselTemplate(
+        columns=[
+            CarouselColumn(
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='Green Life-T5 檯燈產品特色',
+                text='● HEP專利電子式安定器',
                 actions=[
                     MessageTemplateAction(
-                        label='Green Life-T5 檯燈產品特色',
-                        text='Green-Life-T5檯燈 產品特色'
+                        label='☆ 長壽命、耗能低',
+                        #text='message text1'
                     ),
                     MessageTemplateAction(
-                        label='Green Life-T5 檯燈產品規格',
-                        text='Green Life-T5 檯燈 產品規格'
+                        label='☆ 耗能低、啟動快',
+                        #text='message text1'
                     )
+
+                        ]
+                        )
                 ]
             )
         )
