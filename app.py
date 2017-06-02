@@ -379,8 +379,8 @@ def handle_message(event):
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='Green Life-T5 檯燈產品資訊',
-                        text='Green-Life-T5檯燈 產品資訊'
+                        label='Green Life-T5 雙臂式閱讀檯燈 產品資訊',
+                        text='Green Life-T5 雙臂式閱讀檯燈 產品資訊'
                     ),
                     URITemplateAction(
                     label='HEP-東林科技股份有限公司',
@@ -401,7 +401,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
-    if event.message.text =="Green-Life-T5檯燈 產品資訊":
+    if event.message.text =="Green Life-T5 雙臂式閱讀檯燈 產品資訊":
         carousel_template_message = TemplateSendMessage(
         alt_text='Green-Life-T5檯燈 產品資訊',
         template=CarouselTemplate(
@@ -412,12 +412,12 @@ def handle_message(event):
                 text='● HEP專利電子式安定器',
                 actions=[
                     MessageTemplateAction(
-                        label='☆ 長壽命、耗能低',
-                        text=''
+                        label='☆ 燈管預熱技術專利 長壽命、耗能低 [本產品保固三年]',
+                        text='T5/14W 節能螢光燈管 保證使用時間 3萬小時'
                     ),
                     MessageTemplateAction(
                         label='☆ 耗能低、啟動快',
-                        text=''
+                        text='節能環保、減碳設計'
                     )
 
                         ]
@@ -425,20 +425,38 @@ def handle_message(event):
             CarouselColumn(
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 title='Green Life-T5 檯燈產品特色',
-                text='前射式光形設計',
+                text='照明設計',
                 actions=[
                     MessageTemplateAction(
-                        label='光照範圍更大',
-                        text=''
+                        label='☆ 前射式光形設計 光照範圍更大',
+                        text='60cm 高效率螢光燈管'
                     ),
                     MessageTemplateAction(
-                        label='一秒閃爍4萬5千次 不刺眼、不眩光',
-                        text=''
+                        label='☆ 提供柔和舒適照明、專屬閱讀設計',
+                        text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
+                    )
+                   
+                        ]
+            ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='Green Life-T5 檯燈產品特色',
+                text='經典造型設計',
+                actions=[
+                    MessageTemplateAction(
+                        label='☆ 材質',
+                        text='鋁合金經典設計(無毒材質)，表面經陽極處理'
+                    ),
+                    MessageTemplateAction(
+                        label='旋鈕式桌夾座',
+                        text='輕巧不占空間，方便調整'
                     )
                    
                         ]
             )
-                ]
+                               
+                   
+                    ]
             )
         )
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
