@@ -376,7 +376,7 @@ def handle_message(event):
         template=ButtonsTemplate(
                 title='我是Green Life 客服人員\n 很高興能為您服務!',
                 text='請選擇您要的服務',
-                thumbnail_image_url='https://imgur.com/JBwjbqx.jpg',
+                thumbnail_image_url='https://imgur.com/L31XLt2.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='Green Life-T5 檯燈產品資訊',
@@ -475,7 +475,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 title='選擇服務',
                 text='請選擇',
-                thumbnail_image_url='https://imgur.com/L31XLt2.jpg',
+                thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='新聞',
