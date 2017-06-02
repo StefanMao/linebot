@@ -388,7 +388,7 @@ def handle_message(event):
                     ),
                     URITemplateAction(
                     label='我要購買',
-                    uri='https://docs.google.com/forms/d/11VPyoAaQUMcvLHWaxO6upcfXRWID6vaBIVss867ctYE/edit'
+                    uri='https://goo.gl/forms/VOlzuKozvhL40L9p2'
                     ),
                     MessageTemplateAction(
                         label='客服人員諮詢',
