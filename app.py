@@ -401,52 +401,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
-    if event.message.text =="Green Life-T5 檯燈 產品資訊":
-        carousel_template_message = TemplateSendMessage(
-        alt_text='Green-Life-T5檯燈 產品資訊',
-        template=CarouselTemplate(
-        columns=[
-            CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
-                title='Green Life-T5 檯燈產品特色',
-                text='● HEP專利電子式安定器',
-                actions=[
-                    MessageTemplateAction(
-                        label='☆ 燈管預熱技術專利 長壽命、耗能低 [本產品保固三年]',
-                        text='T5/14W 節能螢光燈管 保證使用時間 3萬小時'
-                    ),
-                    MessageTemplateAction(
-                        label='☆ 耗能低、啟動快',
-                        text='節能環保、減碳設計'
-                    )
-
-                        ]
-                        ),
-            CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
-                title='Green Life-T5 檯燈產品特色',
-                text='照明設計',
-                actions=[
-                    MessageTemplateAction(
-                        label='☆ 前射式光形設計 光照範圍更大',
-                        text='60cm 高效率螢光燈管'
-                    ),
-                    MessageTemplateAction(
-                        label='☆ 提供柔和舒適照明、專屬閱讀設計',
-                        text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
-                    )
-                   
-                        ]
-            )
-            
-                               
-                   
-                    ]
-            )
-        )
-        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
-        line_bot_api.reply_message(event.reply_token,carousel_template_message)
-        return 0
       
        
     if event.message.text =="我要購買!":
