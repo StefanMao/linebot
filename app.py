@@ -343,7 +343,7 @@ def panx():
     return content
 
 def callblue(text):
-    L=["小藍","藍小姐","Blue","服務選單","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss","藍兒","小","GL","小姐","克服","蘭","藍鑽","Diamond","diamond","欸","Hi","hi","hello"]
+    L=["小藍","藍小姐","Blue","服務選單","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss","藍兒","小","GL","gl","小姐","克服","蘭","藍鑽","Diamond","diamond","欸","Hi","hi","hello"]
     if( text in L ):  
      return True
     else:
@@ -386,9 +386,9 @@ def handle_message(event):
                     label='HEP-東林科技股份有限公司',
                     uri='http://www.hepgroup.net/?lg=T'
                     ),
-                    MessageTemplateAction(
-                        label='我要購買!',
-                        text='我要購買!'
+                    URITemplateAction(
+                    label='我要購買',
+                    uri='https://docs.google.com/forms/d/11VPyoAaQUMcvLHWaxO6upcfXRWID6vaBIVss867ctYE/edit'
                     ),
                     MessageTemplateAction(
                         label='客服人員諮詢',
