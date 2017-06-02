@@ -384,7 +384,7 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='HEP-東林科技股份有限公司',
-                        text='HEP-東林科技股份有限公司'
+                        uri='https://www.hepgroup.net/?lg=T'
                     ),
                     MessageTemplateAction(
                         label='我要購買!',
@@ -404,6 +404,7 @@ def handle_message(event):
         return 0
 
     elif event.message.text =="HEP-東林科技股份有限公司":
+        
         return 0
     
     elif event.message.text =="我要購買!":
