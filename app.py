@@ -379,8 +379,8 @@ def handle_message(event):
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='Green Life-T5 雙臂式閱讀檯燈 產品資訊',
-                        text='Green Life-T5 雙臂式閱讀檯燈 產品資訊'
+                        label='Green Life-T5 檯燈 產品資訊',
+                        text='Green Life-T5 檯燈 產品資訊'
                     ),
                     URITemplateAction(
                     label='HEP-東林科技股份有限公司',
@@ -401,7 +401,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
-    if event.message.text =="Green Life-T5 雙臂式閱讀檯燈 產品資訊":
+    if event.message.text =="Green Life-T5 檯燈 產品資訊":
         carousel_template_message = TemplateSendMessage(
         alt_text='Green-Life-T5檯燈 產品資訊',
         template=CarouselTemplate(
