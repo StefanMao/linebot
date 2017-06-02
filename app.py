@@ -400,6 +400,26 @@ def handle_message(event):
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
     elif event.message.text =="Green Life 檯燈產品資訊":
+        buttons_template = TemplateSendMessage(
+        alt_text='Buttons template',
+        template=ButtonsTemplate(
+                title='Green Life 檯燈產品資訊',
+                text='請選擇您要的服務',
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                actions=[
+                    MessageTemplateAction(
+                        label='Green Life 檯燈 產品特色',
+                        text='Green Life 檯燈 產品特色'
+                    ),
+                    MessageTemplateAction(
+                        label='Green Life 檯燈 產品規格',
+                        text='Green Life 檯燈 產品規格'
+                    ),
+                  ]
+            )
+        )
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
+        line_bot_api.reply_message(event.reply_token,buttons_template)
         
         return 0
        
