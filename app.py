@@ -382,9 +382,9 @@ def handle_message(event):
                         label='Green Life-T5 檯燈產品資訊',
                         text='Green Life-T5 檯燈產品資訊'
                     ),
-                    MessageTemplateAction(
-                        label='HEP-東林科技股份有限公司',
-                        uri='https://www.hepgroup.net/?lg=T'
+                    URITemplateAction(
+                    label='HEP-東林科技股份有限公司',
+                    uri='http://www.hepgroup.net/?lg=T'
                     ),
                     MessageTemplateAction(
                         label='我要購買!',
@@ -400,9 +400,9 @@ def handle_message(event):
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
     elif event.message.text =="Green Life 檯燈產品資訊":
-
+        
         return 0
-
+       
     elif event.message.text =="HEP-東林科技股份有限公司":
         
         return 0
