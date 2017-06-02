@@ -374,7 +374,7 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='我是Green Life 客服人員\n 很高興能為您服務!',
+                title='我是Green Life 客服人員 \n 很高興能為您服務!',
                 text='請選擇您要的服務',
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
@@ -401,21 +401,21 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
-    if event.message.text =="Green Life 檯燈產品資訊":
+    if event.message.text =="Green Life-T5 檯燈產品資訊":
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='Green Life 檯燈產品資訊',
+                title='Green Life-T5 檯燈產品資訊',
                 text='請選擇您要的服務',
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='Green Life 檯燈 產品特色',
-                        text='Green Life 檯燈 產品特色'
+                        label='Green Life-T5 檯燈 產品特色',
+                        text='Green Life-T5 檯燈 產品特色'
                     ),
                     MessageTemplateAction(
-                        label='Green Life 檯燈 產品規格',
-                        text='Green Life 檯燈 產品規格'
+                        label='Green Life-T5 檯燈 產品規格',
+                        text='Green Life-T5 檯燈 產品規格'
                     ),
                   ]
             )
