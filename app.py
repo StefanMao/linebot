@@ -416,11 +416,10 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='Green Life-T5 檯燈 產品規格',
                         text='Green Life-T5 檯燈 產品規格'
-                    ),
+                    )
                   ]
             )
         )
-        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
         
         return 0
