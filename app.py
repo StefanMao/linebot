@@ -437,23 +437,8 @@ def handle_message(event):
                     )
                    
                         ]
-            ),
-            CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
-                title='Green Life-T5 檯燈產品特色',
-                text='經典造型設計',
-                actions=[
-                    MessageTemplateAction(
-                        label='☆ 材質',
-                        text='鋁合金經典設計(無毒材質)，表面經陽極處理'
-                    ),
-                    MessageTemplateAction(
-                        label='旋鈕式桌夾座',
-                        text='輕巧不占空間，方便調整'
-                    )
-                   
-                        ]
             )
+            
                                
                    
                     ]
