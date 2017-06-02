@@ -352,7 +352,7 @@ def callblue(text):
 
 
 def callblue_msg():
-    call_content="我是藍鑽(Blue Diamond)客服人員\n Miss 藍!\n 很高興能為您服務~"
+    call_content="我是 Green Life 客服人員\n 很高興能為您服務~"
     return call_content     
 
 def errormessage():
@@ -374,13 +374,13 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='我是藍鑽(Blue Diamond)客服人員\n 藍小姐 \n 很高興能為您服務!',
+                title='我是Green Life 客服人員\n 很高興能為您服務!',
                 text='請選擇您要的服務',
                 thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='藍鑽-T5 檯燈產品資訊',
-                        text='藍鑽-T5 檯燈產品資訊'
+                        label='Green Life-T5 檯燈產品資訊',
+                        text='Green Life-T5 檯燈產品資訊'
                     ),
                     MessageTemplateAction(
                         label='HEP-東林科技股份有限公司',
@@ -399,7 +399,7 @@ def handle_message(event):
         )
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
-    elif event.message.text =="藍鑽-T5 檯燈產品資訊":
+    elif event.message.text =="Green Life 檯燈產品資訊":
 
         return 0
 
