@@ -412,27 +412,27 @@ def handle_message(event):
                 text='● HEP專利電子式安定器',
                 actions=[
                     MessageTemplateAction(
-                        label='☆ 燈管預熱技術專利 [產品保固三年]',
+                        label='☆ 燈管預熱技術專利 ',
                         text='T5/14W 節能螢光燈管 '
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低、啟動快、長壽命、耗能低',
-                        text='節能環保、減碳設計'
+                        label='☆ 耗能低 長壽命 耗能低',
+                        text='節能環保 減碳設計'
                     )
 
                         ]
                         ),
             CarouselColumn(
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
-                title='Green Life-T5 檯燈產品特色',
-                text='照明設計',
+                title='Green Life-T5 檯燈 [保固三年]',
+                text='舒適照明設計',
                 actions=[
                     MessageTemplateAction(
-                        label='☆ 前射式光形設計 光照範圍更大',
-                        text='60cm 高效率螢光燈管'
+                        label='☆ 前射式光形設計',
+                        text='60cm高效率螢光燈管 光照範圍更大'
                     ),
                     MessageTemplateAction(
-                        label='☆ 提供柔和舒適照明、專屬閱讀設計',
+                        label='☆專屬閱讀設計',
                         text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
                     )
                    
