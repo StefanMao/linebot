@@ -460,11 +460,11 @@ def handle_message(event):
                 text='請問您對檯燈還有些疑惑嗎?',
                 actions=[
                     MessageTemplateAction(
-                        label='☆ 我已經了解，我要選擇其他服務!',
+                        label='☆ 沒有，我要選擇其他服務!',
                         text='服務選單'
                     ),
                     MessageTemplateAction(
-                        label='☆ 我仍有一些疑問，想要請教客服人員~',
+                        label='☆ 仍有疑問，詢問客服人員',
                         text='客服人員諮詢'
                     )
                    
