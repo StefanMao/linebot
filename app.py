@@ -401,7 +401,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
-    if event.message.text =="Green Life-T5 檯燈產品資訊":
+    if event.message.text =="1":
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
