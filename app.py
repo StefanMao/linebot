@@ -343,7 +343,7 @@ def panx():
     return content
 
 def callblue(text):
-    L=["小藍","藍小姐","Blue","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss","藍兒","小","小姐","克服","蘭","藍鑽","Diamond","diamond","欸","Hi","hi","hello"]
+    L=["小藍","藍小姐","Blue","服務選單","blue","藍","客服人員","哈囉","嗨","在嗎","在嘛","安安","Miss Blue","Miss","miss","藍兒","小","小姐","克服","蘭","藍鑽","Diamond","diamond","欸","Hi","hi","hello"]
     if( text in L ):  
      return True
     else:
@@ -450,6 +450,22 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='☆ 旋鈕式桌夾座',
                         text='輕巧不占空間，方便調整'
+                    )
+                   
+                        ]
+            ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='您好，我是客服人員 小藍 ',
+                text='請問您對檯燈還有些疑惑嗎?',
+                actions=[
+                    MessageTemplateAction(
+                        label='☆ 我已經了解，我要選擇其他服務!',
+                        text='服務選單'
+                    ),
+                    MessageTemplateAction(
+                        label='☆ 我仍有一些疑問，想要請教客服人員~',
+                        text='客服人員諮詢'
                     )
                    
                         ]
