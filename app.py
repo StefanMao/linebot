@@ -376,7 +376,7 @@ def handle_message(event):
         template=ButtonsTemplate(
                 title='我是Green Life 客服人員\n 很高興能為您服務!',
                 text='請選擇您要的服務',
-                thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
+                thumbnail_image_url='http://imgur.com/vQM71o3.jpg', #檯燈封面照1
                 actions=[
                     MessageTemplateAction(
                         label='Green Life-T5 檯燈產品資訊',
@@ -387,8 +387,8 @@ def handle_message(event):
                         text='HEP-東林科技股份有限公司'
                     ),
                     MessageTemplateAction(
-                        label='產品促銷',
-                        text='產品促銷'
+                        label='我要購買!',
+                        text='我要購買'
                     ),
                     MessageTemplateAction(
                         label='客服人員諮詢',
@@ -406,7 +406,7 @@ def handle_message(event):
     elif event.message.text =="HEP-東林科技股份有限公司":
         return 0
     
-    elif event.message.text =="產品促銷":
+    elif event.message.text =="我要購買":
         return 0
     
     elif event.message.text =="客服人員諮詢":
