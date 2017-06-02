@@ -418,6 +418,10 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='☆ 耗能低 長壽命',
                         text='節能環保 減碳設計'
+                    ),
+                    MessageTemplateAction(
+                        label='回上一頁',
+                        text='服務選單'
                     )
 
                         ]
@@ -434,7 +438,12 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='☆專屬閱讀設計',
                         text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
+                    ),
+                    MessageTemplateAction(
+                        label='回上一頁',
+                        text='服務選單'
                     )
+                    
                    
                         ]
             ),
@@ -466,6 +475,10 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='☆ 仍有疑問，詢問客服人員',
                         text='客服人員諮詢'
+                    ),
+                    MessageTemplateAction(
+                        label='回上一頁',
+                        text='服務選單'
                     )
                    
                         ]
