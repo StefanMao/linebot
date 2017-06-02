@@ -412,11 +412,11 @@ def handle_message(event):
                 text='● HEP專利電子式安定器',
                 actions=[
                     MessageTemplateAction(
-                        label='☆ 燈管預熱技術專利 長壽命、耗能低 [本產品保固三年]',
-                        text='T5/14W 節能螢光燈管 保證使用時間 3萬小時'
+                        label='☆ 燈管預熱技術專利 [產品保固三年]',
+                        text='T5/14W 節能螢光燈管 '
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低、啟動快',
+                        label='☆ 耗能低、啟動快、長壽命、耗能低',
                         text='節能環保、減碳設計'
                     )
 
