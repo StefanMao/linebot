@@ -425,7 +425,7 @@ def handle_message(event):
             CarouselColumn(
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 title='Green Life-T5 檯燈 [保固三年]',
-                text='舒適照明設計',
+                text='提供舒適照明設計環境',
                 actions=[
                     MessageTemplateAction(
                         label='☆ 前射式光形設計',
@@ -434,6 +434,22 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='☆專屬閱讀設計',
                         text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
+                    )
+                   
+                        ]
+            ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='Green Life-T5 檯燈 ',
+                text='經典造型設計',
+                actions=[
+                    MessageTemplateAction(
+                        label='☆ 無毒材質',
+                        text='鋁合金經典設計，表面經陽極處理'
+                    ),
+                    MessageTemplateAction(
+                        label='☆ 旋鈕式桌夾座',
+                        text='輕巧不占空間，方便調整'
                     )
                    
                         ]
