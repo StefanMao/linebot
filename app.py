@@ -379,8 +379,8 @@ def handle_message(event):
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='Green Life-T5 檯燈 產品資訊',
-                        text='Green Life-T5 檯燈 產品資訊'
+                        label='Green Life-T5 檯燈產品資訊',
+                        text='Green-Life-T5檯燈 產品資訊'
                     ),
                     URITemplateAction(
                     label='HEP-東林科技股份有限公司',
@@ -401,6 +401,49 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
+    if event.message.text =="Green-Life-T5檯燈 產品資訊":
+        carousel_template_message = TemplateSendMessage(
+        alt_text='Green-Life-T5檯燈 產品資訊',
+        template=CarouselTemplate(
+        columns=[
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='Green Life-T5 檯燈產品特色',
+                text='● HEP專利電子式安定器',
+                actions=[
+                    MessageTemplateAction(
+                        label='☆ 長壽命、耗能低',
+                        text='1'
+                    ),
+                    MessageTemplateAction(
+                        label='☆ 耗能低、啟動快',
+                        text='1'
+                    )
+
+                        ]
+                        ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='Green Life-T5 檯燈產品特色',
+                text='前射式光形設計',
+                actions=[
+                    MessageTemplateAction(
+                        label='光照範圍更大',
+                        text='message text2'
+                    ),
+                    MessageTemplateAction(
+                        label='一秒閃爍4萬5千次 不刺眼、不眩光',
+                        text='message text2'
+                    )
+                   
+                        ]
+            )
+                ]
+            )
+        )
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
+        line_bot_api.reply_message(event.reply_token,carousel_template_message)
+        return 0
       
        
     if event.message.text =="我要購買!":
