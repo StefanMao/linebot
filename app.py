@@ -380,7 +380,7 @@ def handle_message(event):
                 actions=[
                     MessageTemplateAction(
                         label='Green Life-T5 檯燈產品資訊',
-                        text='Green Life-T5 檯燈產品資訊'
+                        text='Green-Life-T5檯燈 產品資訊'
                     ),
                     URITemplateAction(
                     label='HEP-東林科技股份有限公司',
@@ -401,11 +401,11 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,buttons_template)
         return 0
     
-    if event.message.text =="1":
+    if event.message.text =="Green-Life-T5檯燈 產品資訊":
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='Green Life-T5 檯燈產品資訊',
+                title='Green Life T5檯燈產品資訊',
                 text='請選擇您要的服務',
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
@@ -421,13 +421,9 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token,buttons_template)
-        
         return 0
+      
        
-    if event.message.text =="HEP-東林科技股份有限公司":
-        
-        return 0
-    
     if event.message.text =="我要購買!":
         return 0
     
