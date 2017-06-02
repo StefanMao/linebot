@@ -399,7 +399,9 @@ def handle_message(event):
         )
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=call_content))
         line_bot_api.reply_message(event.reply_token,buttons_template)
-    elif event.message.text =="Green Life 檯燈產品資訊":
+        return 0
+    
+    if event.message.text =="Green Life 檯燈產品資訊":
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -423,17 +425,17 @@ def handle_message(event):
         
         return 0
        
-    elif event.message.text =="HEP-東林科技股份有限公司":
+    if event.message.text =="HEP-東林科技股份有限公司":
         
         return 0
     
-    elif event.message.text =="我要購買!":
+    if event.message.text =="我要購買!":
         return 0
     
-    elif event.message.text =="客服人員諮詢":
+    if event.message.text =="客服人員諮詢":
         return 0
 
-    elif event.message.text == "正妹圖片":
+    if event.message.text == "正妹圖片":
         index_pic = random.randint(0, len(picture) - 1)
         image_message = ImageSendMessage(
             original_content_url=picture[index_pic],
@@ -443,10 +445,10 @@ def handle_message(event):
             event.reply_token, image_message)
         return 0
 
-    else:
-            reply_unknow="不好意思，客服人員忙線中...."
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=reply_unknow))
-            return 0
+    #else:
+    #        reply_unknow="不好意思，客服人員忙線中...."
+    #        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=reply_unknow))
+    #        return 0
 
         
     
