@@ -354,6 +354,9 @@ def callblue(text):
 def callblue_msg():
     call_content="我是 Green Life 客服人員\n 很高興能為您服務~"
     return call_content     
+def  service_function():
+     service_msg="以下為客服人員聯絡方式 \n 有產品上的任何問題歡迎與我們聯絡 \n 客服人員:毛鈺祺 \n 聯絡方式:0975013655 \n Line ID :51411121010"
+    return 
 
 def errormessage():
     reply_errormessage="功能維修中.."
@@ -494,10 +497,34 @@ def handle_message(event):
         return 0
       
        
-    if event.message.text =="我要購買!":
-        return 0
-    
     if event.message.text =="客服人員諮詢":
+        carousel_template_message = TemplateSendMessage(
+        alt_text='Green Life 客服人員',
+        template=CarouselTemplate(
+        columns=[
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                title='如果有任何產品上的問題，請與我們聯絡',
+                text='客服人員:毛鈺祺',
+                actions=[
+                    MessageTemplateAction(
+                        label='行動電話:0975013655',
+                        text='行動電話:0975013655'
+                    ),
+                    MessageTemplateAction(
+                        label='Line ID :51411121010',
+                        text='Line ID :51411121010'
+                    ),
+                    MessageTemplateAction(
+                        label='回上一頁',
+                        text='服務選單'
+                    )
+                        ]
+                        )
+            ]
+            )
+        )
+
         return 0
 
     if event.message.text == "正妹圖片":
