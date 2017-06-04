@@ -510,8 +510,8 @@ def handle_message(event):
                         text='行動電話:0975013655'
                     ),
                     MessageTemplateAction(
-                        label='Line ID :51411121010',
-                        text='Line ID :51411121010'
+                        label='Line ID:51411121010',
+                        text='Line ID:51411121010'
                     ),
                     MessageTemplateAction(
                         label='回上一頁',
@@ -522,7 +522,7 @@ def handle_message(event):
             ]
             )
         )
-
+        line_bot_api.reply_message(event.reply_token,carousel_template_message)
         return 0
 
     if event.message.text == "正妹圖片":
