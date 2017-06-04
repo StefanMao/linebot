@@ -419,11 +419,10 @@ def handle_message(event):
                         label='☆ 耗能低 長壽命',
                         text='節能環保 減碳設計'
                     ),
-                    URITemplateAction(
-                    label='回到服務選單',
-                    uri='test1'
+                    MessageTemplateAction(
+                        label='☆ 耗能低 長壽命',
+                        text='節能環保 減碳設計'
                     )
-
                         ]
                         ),
             CarouselColumn(
@@ -439,11 +438,10 @@ def handle_message(event):
                         label='☆專屬閱讀設計',
                         text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
                     ),
-                    URITemplateAction(
-                    label='回到服務選單',
-                    uri='test1'
+                    MessageTemplateAction(
+                        label='☆ 耗能低 長壽命',
+                        text='節能環保 減碳設計'
                     )
-
                    
                         ]
             ),
@@ -460,9 +458,9 @@ def handle_message(event):
                         label='☆ 旋鈕式桌夾座',
                         text='輕巧不占空間，方便調整'
                     ),
-                    URITemplateAction(
-                    label='回到服務選單',
-                    uri='test1'
+                    MessageTemplateAction(
+                        label='☆ 耗能低 長壽命',
+                        text='節能環保 減碳設計'
                     )
                    
                         ]
@@ -480,9 +478,9 @@ def handle_message(event):
                         label='☆ 仍有疑問，詢問客服人員',
                         text='客服人員諮詢'
                     ),
-                    URITemplateAction(
-                    label='回到服務選單',
-                    uri='test1'
+                    MessageTemplateAction(
+                        label='☆ 耗能低 長壽命',
+                        text='節能環保 減碳設計'
                     )
                    
                         ]
