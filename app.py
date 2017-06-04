@@ -447,7 +447,7 @@ def handle_message(event):
                         ]
             ),
             CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                thumbnail_image_url='https://imgur.com/uYPW1hI.jpg',
                 title='Green Life-T5 檯燈 ',
                 text='經典造型設計',
                 actions=[
@@ -501,7 +501,7 @@ def handle_message(event):
         template=CarouselTemplate(
         columns=[
             CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
+                thumbnail_image_url='https://imgur.com/rpyONDQ.jpg',
                 title='如果有任何產品上的問題 \n請與我們聯絡',
                 text='客服人員:毛鈺祺',
                 actions=[
