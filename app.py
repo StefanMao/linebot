@@ -375,7 +375,7 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-                title='我是Green Life 客服人員 \n 很高興能為您服務!',
+                title='我是Green Life 客服人員\n 很高興能為您服務!',
                 text='請選擇您要的服務',
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
                 actions=[
@@ -502,16 +502,16 @@ def handle_message(event):
         columns=[
             CarouselColumn(
                 thumbnail_image_url='https://i.imgur.com/lda5TIU.jpg',
-                title='如果有任何產品上的問題，請與我們聯絡',
+                title='如果有任何產品上的問題 \n請與我們聯絡',
                 text='客服人員:毛鈺祺',
                 actions=[
                     MessageTemplateAction(
                         label='行動電話:0975013655',
                         text='行動電話:0975013655'
                     ),
-                    MessageTemplateAction(
-                        label='Line ID:51411121010',
-                        text='Line ID:51411121010'
+                    URITemplateAction(
+                    label='Line ID',
+                    uri='https://line.me/ti/p/eIsJC9BqG7'
                     ),
                     MessageTemplateAction(
                         label='回上一頁',
