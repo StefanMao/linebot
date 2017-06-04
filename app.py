@@ -420,8 +420,8 @@ def handle_message(event):
                         text='節能環保 減碳設計'
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低 長壽命',
-                        text='節能環保 減碳設計'
+                        label=' 回上一頁',
+                        text='服務選單'
                     )
                         ]
                         ),
@@ -439,8 +439,8 @@ def handle_message(event):
                         text='螢光燈每秒閃爍4萬5千次、防眩光燈罩'
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低 長壽命',
-                        text='節能環保 減碳設計'
+                        label=' 回上一頁',
+                        text='服務選單'
                     )
                    
                         ]
@@ -459,8 +459,8 @@ def handle_message(event):
                         text='輕巧不占空間，方便調整'
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低 長壽命',
-                        text='節能環保 減碳設計'
+                        label=' 回上一頁',
+                        text='服務選單'
                     )
                    
                         ]
@@ -479,8 +479,8 @@ def handle_message(event):
                         text='客服人員諮詢'
                     ),
                     MessageTemplateAction(
-                        label='☆ 耗能低 長壽命',
-                        text='節能環保 減碳設計'
+                        label=' 回上一頁',
+                        text='服務選單'
                     )
                    
                         ]
