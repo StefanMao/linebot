@@ -354,9 +354,7 @@ def callblue(text):
 def callblue_msg():
     call_content="我是 Green Life 客服人員\n 很高興能為您服務~"
     return call_content     
-def  service_function():
-     service_msg="以下為客服人員聯絡方式 \n 有產品上的任何問題歡迎與我們聯絡 \n 客服人員:毛鈺祺 \n 聯絡方式:0975013655 \n Line ID :51411121010"
-    return 
+
 
 def errormessage():
     reply_errormessage="功能維修中.."
